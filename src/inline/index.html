@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Critical CSS Demo - Inline Version</title>
+    <!-- Critical CSSをインライン化 -->
+    <style>
+        /* ファーストビューに必要なCSSのみ */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(45deg, #1a2a6c, #b21f1f);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-text {
+            font-size: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .cta-button {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            background: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+    </style>
+    <!-- 残りのCSSを非同期で読み込み -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+</head>
+<body>
+    <div class="hero">
+        <h1>大きな見出し</h1>
+        <p class="hero-text">ヒーローセクションのテキスト</p>
+        <button class="cta-button">アクション</button>
+    </div>
+    
+    <div class="content">
+        <div class="card">
+            <h2>カード1</h2>
+            <p>スクロールして表示されるコンテンツ</p>
+        </div>
+        <div class="card">
+            <h2>カード2</h2>
+            <p>これも初期ビューポート外</p>
+        </div>
+    </div>
+</body>
+</html>
