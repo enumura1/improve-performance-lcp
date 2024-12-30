@@ -3,7 +3,6 @@ import express from 'express';
 const app = express();
 const port = 3000;
 
-// 静的ファイルの提供
 app.use(express.static('src'));
 
 app.listen(port, () => {
