@@ -2,10 +2,8 @@
 <html>
 <head>
     <title>Critical CSS Demo - Inline Version</title>
-    <!-- Critical CSSをインライン化 -->
     <style>
-        /* ファーストビューに必要なCSSのみ */
-        .hero {
+        .first-view {
             height: 100vh;
             background: linear-gradient(45deg, #1a2a6c, #b21f1f);
             display: flex;
@@ -15,7 +13,7 @@
             color: white;
         }
 
-        .hero-text {
+        .first-view-text {
             font-size: 1.5rem;
             margin: 2rem 0;
         }
@@ -35,10 +33,10 @@
     <noscript><link rel="stylesheet" href="styles.css"></noscript>
 </head>
 <body>
-    <div class="hero">
-        <h1>大きな見出し</h1>
-        <p class="hero-text">ヒーローセクションのテキスト</p>
-        <button class="cta-button">アクション</button>
+    <div class="first-view">
+        <h1>サンプルテキスト</h1>
+        <p class="first-view-text">ほげほげテキスト</p>
+        <button class="cta-button">サンプルボタン</button>
     </div>
     
     <div class="content">

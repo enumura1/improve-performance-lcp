@@ -1,4 +1,4 @@
-.hero {
+.first-view {
   height: 100vh;
   background: linear-gradient(45deg, #1a2a6c, #b21f1f);
   display: flex;
@@ -8,7 +8,7 @@
   color: white;
 }
 
-.hero-text {
+.first-view-text {
   font-size: 1.5rem;
   margin: 2rem 0;
 }
